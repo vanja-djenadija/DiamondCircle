@@ -20,14 +20,14 @@ public abstract class Figure extends Thread implements Element {
     private String name;
     private Color color;
     private int numberOfDiamonds = 0;
-    private int numberOfSteps;
+    private int numberOfSteps = 0;
     private int numberOfCrossedFields = 0;
     private long movementTime = 0;
     private boolean isFinished = false;
     private boolean isStarted = false;
     private boolean isFallen = false;
-    private int startPosition;
-    private int endPosition;
+    private int startPosition = 0;
+    private int endPosition = 0;
 
     private final ArrayList<Integer> crossedFields = new ArrayList<>();
     public final ReentrantLock LOCK = new ReentrantLock();
@@ -86,11 +86,13 @@ public abstract class Figure extends Thread implements Element {
                     int currentIndex, indexBeforeMove;
                     if (numberOfCrossedFields > 0 && numberOfSteps + numberOfDiamonds > 0) {
                         indexBeforeMove = gameService.getPathElement(numberOfCrossedFields - 1) - 1;
-                        if (gameService.matrix[indexBeforeMove / matrixDim][indexBeforeMove % matrixDim] instanceof Diamond) {
-                            pickDiamond(indexBeforeMove, indexBeforeMove / matrixDim, indexBeforeMove % matrixDim);
+                        int x = indexBeforeMove / matrixDim;
+                        int y = indexBeforeMove % matrixDim;
+                        if (gameService.matrix[x][y] instanceof Diamond) {
+                            pickDiamond(indexBeforeMove, x, y);
                         }
                         gameService.getRemoveFigure().accept(indexBeforeMove);
-                        gameService.matrix[indexBeforeMove / matrixDim][indexBeforeMove % matrixDim] = null;
+                        gameService.matrix[x][y] = null;
                     }
                     int x, y, temp = numberOfCrossedFields;
                     int numberOfStepsTemp = numberOfSteps;
@@ -122,7 +124,6 @@ public abstract class Figure extends Thread implements Element {
                             gameService.matrix[x][y] = this; // update matrix
                             gameService.getAddFigure().accept(this, currentIndex); // update gui - add figure
                         }
-                        //System.out.println(this + " pozicija " + (currentIndex + 1));
                         try {
                             //noinspection BusyWait
                             Thread.sleep(gameService.SLEEP_TIME); // move every 1 second
@@ -137,28 +138,16 @@ public abstract class Figure extends Thread implements Element {
                         crossedFields.add(currentIndex + 1);
                     }
                 }
-                //System.out.println();
                 long end = System.currentTimeMillis();
                 movementTime += (end - start);
-                Duration dtm = new Duration(movementTime); // TODO: durationToMillis
-                //printMatrix(); // TODO: Delete
-                new FigureMovement(this.name, this.getLabel(), String.format("%02d:%02d:%02d", (int) dtm.toHours(), (int) dtm.toMinutes(), (int) dtm.toSeconds()), this.color, this.crossedFields); // save to file info about each movement
+                Duration duration = new Duration(movementTime);
+                // save to file info about each movement
+                new FigureMovement(this.name, this.getLabel(), String.format("%02d:%02d:%02d", (int) duration.toHours(), (int) duration.toMinutes(), (int) duration.toSeconds()), this.color, this.crossedFields);
                 LOCK.notify(); // notify for end of move
             }
         }
         isFinished = true;
     }
-
-    // TODO Delete
-    //private void printMatrix() {
-    //    System.out.println("================================================ NOVI POTEZ ================================================");
-    //    for (int i = 0; i < gameService.getMatrixDim(); i++) {
-    //        for (int j = 0; j < gameService.getMatrixDim(); j++) {
-    //            System.out.print(gameService.matrix[i][j] + " ");
-    //        }
-    //        System.out.println();
-    //    }
-    //}
 
     private void pickDiamond(int index, int x, int y) {
         gameService.getRemoveDiamond().accept(index);
@@ -204,7 +193,6 @@ public abstract class Figure extends Thread implements Element {
     }
 
     public void fallInsideHole(int index) {
-        //System.out.println("FALL INSIDE HOLE " + this.getFigureName());
         gameService.getRemoveFigure().accept(index);
         isFallen = true;
     }

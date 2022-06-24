@@ -28,3 +28,7 @@
   <thread>1</thread>
   <message>java.lang.NumberFormatException: For input string: "knkjnjk"</message>
 </record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>

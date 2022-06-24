@@ -104,7 +104,7 @@ public class Player extends Thread {
 
                 if (!currentFigure.isStarted()) {
                     currentFigure.start();
-                    sleepNow(); // TODO: Kako drugačije?
+                    sleepNow();
                 }
 
                 synchronized (currentFigure.LOCK) {

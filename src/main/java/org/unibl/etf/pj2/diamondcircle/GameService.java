@@ -99,17 +99,15 @@ public class GameService {
         while (!gameOver) {
             currentCard = cards.removeFirst();
             showCard.accept(currentCard);
-            //System.out.println();
-            //System.out.println(currentCard);
             int numberOfFields;
             if (currentCard instanceof BasicCard) {
                 numberOfFields = ((BasicCard) currentCard).getNumberOfFields();
                 currentPlayer = tempPlayers.removeFirst();
-                System.out.println(currentPlayer);
                 currentPlayer.setNumberOfFields(numberOfFields);
+
                 if (!currentPlayer.isStarted()) {
                     currentPlayer.start();
-                    sleepNow(); // TODO: Kako drugačije?
+                    sleepNow();
                 }
 
                 synchronized (currentPlayer.LOCK) {
@@ -209,7 +207,6 @@ public class GameService {
         Collections.shuffle(colors);
         colors.stream().limit(numberOfPlayers).forEach(color -> players.add(new Player(color)));
         Collections.shuffle(players);
-        players.forEach(System.out::println);
     }
 
     private void configurePath() {
@@ -337,6 +334,7 @@ public class GameService {
         int numberOfFields = figure.getNumberOfFields();
         int startPosition = figure.getStartPosition();
         int endPosition = figure.getEndPosition();
+        if (startPosition == 0 || endPosition == 0) return "";
         return String.format(MOVEMENT_MASSAGE_FORMAT, playerName, figureName, numberOfFields, startPosition, endPosition);
     }
 

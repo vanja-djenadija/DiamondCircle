@@ -19,7 +19,6 @@ public class GhostFigure extends Thread {
 
     private GhostFigure() {
         generatePath();
-
     }
 
     public static GhostFigure getInstance() {
@@ -47,7 +46,6 @@ public class GhostFigure extends Thread {
                 path.add(pathElement);
         }
     }
-
 
     @Override
     public void run() {

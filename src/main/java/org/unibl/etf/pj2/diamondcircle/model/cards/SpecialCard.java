@@ -47,13 +47,9 @@ public class SpecialCard extends Card {
             int currentIndex = index - 1;
             int x = currentIndex / matrixDim;
             int y = currentIndex % matrixDim;
-            //System.out.println("RUPA NA POZICIJI " + (currentIndex + 1));
             nonLevitatingIndexes.add(currentIndex);
             gameService.getAddHole().accept(hole, currentIndex); // update gui - add holes
             if ((gameService.matrix[x][y] instanceof Figure) && !(gameService.matrix[x][y] instanceof ILevitatable)) {
-                //sleepNow();
-                // System.out.println("!!!!!!!!!!!!!!!!!!!!!!      POJELAAA ME RUPAAAAAAAAA    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                //System.out.println(" na poziciji " + (currentIndex + 1));
                 ((Figure) gameService.matrix[x][y]).fallInsideHole(currentIndex);
                 gameService.matrix[x][y] = null;
             }
