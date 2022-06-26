@@ -31,15 +31,15 @@ import static org.unibl.etf.pj2.diamondcircle.Util.sleepNow;
 public class GameService {
 
     private static final String MOVEMENT_MASSAGE_FORMAT = "Na potezu je %s, %s prelazi %d polja, pomjera se sa pozicije %d na poziciju %d.";
-    public static final String CONFIG_PATH = "src/main/resources/config.properties";
+    private static final String CONFIG_PATH = "src/main/resources/config.properties";
     public static final String RESULTS_PATH = "src/main/resources/results/";
-    public static final String GAME_LOGGER_PATH = "src/main/resources/logs/GameService.log";
-    public static final int MIN_DIM = 7;
-    public static final int MAX_DIM = 10;
-    public static final int MIN_PLAYERS = 2;
-    public static final int MAX_PLAYERS = 4;
-    public static final int NUMBER_OF_BASIC_CARDS = 10;
-    public static final int NUMBER_OF_SPECIAL_CARDS = 12;
+    private static final String GAME_LOGGER_PATH = "src/main/resources/logs/GameService.log";
+    private static final int MIN_DIM = 7;
+    private static final int MAX_DIM = 10;
+    private static final int MIN_PLAYERS = 2;
+    private static final int MAX_PLAYERS = 4;
+    private static final int NUMBER_OF_BASIC_CARDS = 10;
+    private static final int NUMBER_OF_SPECIAL_CARDS = 12;
     public final ReentrantLock PAUSE_LOCK = new ReentrantLock();
     public final long SLEEP_TIME = 1000;
 
