@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFF3CD;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.pj2.diamondcircle.gui_controllers.FigureMovementController">
+   <top>
+      <HBox BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Label text="Vrijeme kretanja: " />
+            <Label fx:id="movementTimeLabel" layoutX="10.0" layoutY="10.0" />
+         </children>
+      </HBox>
+   </top>
+   <padding>
+      <Insets left="10.0" top="10.0" />
+   </padding>
+</BorderPane>

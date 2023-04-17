@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFF3CD;"
+            xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.pj2.diamondcircle.gui_controllers.DiamondCircleController">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <Label fx:id="numberOfRoundsPlayed" style="-fx-text-fill: #4545BD;"
+                           text="Trenutni broj odgranih igara: " textAlignment="CENTER" wrapText="true"/>
+                    <Label fx:id="numbersPlayedLabel"/>
+                </HBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0"
+                       style="-fx-background-color: #FFF3CD; -fx-text-fill: #C01B1B;" text="DiamondCircle"
+                       textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="27.0"/>
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="startButton" alignment="CENTER" mnemonicParsing="false" onAction="#buttonAction" prefHeight="43.0"
+                        prefWidth="125.0" style="-fx-text-fill: #4545BD;" text="Pokreni" translateX="-10.0">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </HBox>
+            <HBox fx:id="playersHBox" alignment="CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets left="100.0" right="100.0"/>
+                </padding>
+            </HBox>
+            <Region minHeight="20.0" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </top>
+    <left>
+        <ListView fx:id="figuresListView" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#showFigureMovement"
+                  prefHeight="547.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0"/>
+            </BorderPane.margin>
+        </ListView>
+    </left>
+    <center>
+        <HBox BorderPane.alignment="CENTER">
+            <Region layoutX="452.0" layoutY="10.0" minWidth="10.0" HBox.hgrow="ALWAYS"/>
+            <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                <Region layoutX="10.0" layoutY="10.0" VBox.vgrow="ALWAYS"/>
+                <HBox fx:id="centerHBox">
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS"/>
+                </HBox>
+                <Region VBox.vgrow="ALWAYS"/>
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Opis značenja karte"
+                       textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+                <Region layoutX="10.0" layoutY="119.0" VBox.vgrow="ALWAYS"/>
+                <HBox VBox.vgrow="ALWAYS">
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <TextArea fx:id="cardTextArea" editable="false" wrapText="true" HBox.hgrow="ALWAYS"/>
+                    <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS"/>
+                </HBox>
+                <Region layoutX="10.0" layoutY="10.0" VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </HBox>
+    </center>
+    <right>
+        <VBox alignment="TOP_CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0"/>
+            </BorderPane.margin>
+            <Label alignment="CENTER" style="-fx-background-color: D9E8FB; -fx-text-fill: #4545BD;"
+                   text="Trenutna karta" VBox.vgrow="ALWAYS">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+            <AnchorPane maxHeight="300.0" maxWidth="200.0" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <ImageView fx:id="cardImageView" pickOnBounds="true" preserveRatio="true"/>
+            </AnchorPane>
+            <Label style="-fx-background-color: FFF1CC;" text="Vrijeme trajanja igre">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Label>
+            <Label fx:id="timeLabel">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Label>
+            <HBox spacing="5.0" VBox.vgrow="ALWAYS"/>
+            <Button mnemonicParsing="false" onAction="#showResults" prefHeight="78.0" prefWidth="112.0"
+                    text="Prikaz liste fajlova sa rezultatima" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+        </VBox>
+    </right>
+</BorderPane>

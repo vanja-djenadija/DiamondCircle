@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-06-17T15:09:09.706403600Z</date>
+  <millis>1655478549706</millis>
+  <nanos>403600</nanos>
+  <sequence>0</sequence>
+  <logger>org.unibl.etf.pj2.diamondcircle.GameService</logger>
+  <level>SEVERE</level>
+  <class>org.unibl.etf.pj2.diamondcircle.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>java.lang.NumberFormatException: For input string: "knkjnjk"</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-06-17T15:09:18.639502100Z</date>
+  <millis>1655478558639</millis>
+  <nanos>502100</nanos>
+  <sequence>0</sequence>
+  <logger>org.unibl.etf.pj2.diamondcircle.GameService</logger>
+  <level>SEVERE</level>
+  <class>org.unibl.etf.pj2.diamondcircle.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>java.lang.NumberFormatException: For input string: "knkjnjk"</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>

@@ -1,0 +1,25 @@
+Igrač 4
+	Figura 13 (SuperFastFigure, RED) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 14 (LevitatingFigure, RED) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 15 (SuperFastFigure, RED) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 16 (BasicFigure, RED) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+
+Igrač 3
+	Figura 9 (SuperFastFigure, BLUE) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 10 (SuperFastFigure, BLUE) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 11 (BasicFigure, BLUE) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 12 (SuperFastFigure, BLUE) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+
+Igrač 2
+	Figura 5 (BasicFigure, YELLOW) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 6 (LevitatingFigure, YELLOW) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 7 (BasicFigure, YELLOW) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 8 (BasicFigure, YELLOW) - pređeni put [5, 16, 27, 38, 49] - stigla do cilja: Da
+
+Igrač 1
+	Figura 1 (SuperFastFigure, GREEN) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57] - stigla do cilja: Da
+	Figura 2 (SuperFastFigure, GREEN) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33, 24, 25, 36, 47, 56, 65, 54, 43, 34, 35, 46, 55, 44, 45] - stigla do cilja: Da
+	Figura 3 (SuperFastFigure, GREEN) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74, 63, 52, 41, 32, 23, 14, 15, 26, 37, 48, 57, 66, 75, 64, 53, 42, 33] - stigla do cilja: Da
+	Figura 4 (BasicFigure, GREEN) - pređeni put [5, 16, 27, 38, 49, 58, 67, 76, 85, 74] - stigla do cilja: Da
+
+Ukupno vrijeme trajanja igre: 0 h 2 m 10 s
